@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326 开始准备工作execute()1234567@MainThreadpublic final AsyncT">
+<meta name="description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326">
 <meta name="keywords" content="源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AsyncTask源码完全解析">
 <meta property="og:url" content="http://yoursite.com/2020/01/15/AsyncTask源码完全解析/index.html">
 <meta property="og:site_name" content="Ljl233的博客">
-<meta property="og:description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326 开始准备工作execute()1234567@MainThreadpublic final AsyncT">
+<meta property="og:description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS0zMWRmNzk0MDA2YzY5NjIxLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA">
-<meta property="og:updated_time" content="2020-01-15T12:05:26.121Z">
+<meta property="og:updated_time" content="2020-04-04T08:42:47.294Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AsyncTask源码完全解析">
-<meta name="twitter:description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326 开始准备工作execute()1234567@MainThreadpublic final AsyncT">
+<meta name="twitter:description" content="AsyncTask 源码分析参考：https://blog.csdn.net/iispring/article/details/50670388 AsyncTask 使用流程 图源：https://blog.csdn.net/carson_ho/article/details/79314326">
 <meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS0zMWRmNzk0MDA2YzY5NjIxLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA">
 
 
@@ -305,6 +305,10 @@
         <h2 id="AsyncTask-源码分析"><a href="#AsyncTask-源码分析" class="headerlink" title="AsyncTask 源码分析"></a><strong>AsyncTask 源码分析</strong></h2><p>参考：<a href="https://blog.csdn.net/iispring/article/details/50670388" target="_blank" rel="noopener">https://blog.csdn.net/iispring/article/details/50670388</a></p>
 <h2 id="AsyncTask-使用流程"><a href="#AsyncTask-使用流程" class="headerlink" title="AsyncTask 使用流程"></a><strong>AsyncTask 使用流程</strong></h2><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS0zMWRmNzk0MDA2YzY5NjIxLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA" alt="https://blog.csdn.net/carson_ho/article/details/79314325"></p>
 <p>图源：<a href="https://blog.csdn.net/carson_ho/article/details/79314326" target="_blank" rel="noopener">https://blog.csdn.net/carson_ho/article/details/79314326</a></p>
+<a id="more"></a>
+
+
+
 <h2 id="开始准备工作"><a href="#开始准备工作" class="headerlink" title="开始准备工作"></a><strong>开始准备工作</strong></h2><h3 id="execute"><a href="#execute" class="headerlink" title="execute()"></a><strong>execute()</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MainThread</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> AsyncTask&lt;Params, Progress, Result&gt; <span class="title">execute</span><span class="params">(Params... params)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> executeOnExecutor(sDefaultExecutor, params);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -412,8 +416,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/18/rxjava/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2019/10/08/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -421,6 +425,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/04/rxjava/" rel="prev" title="RxJava">
+                RxJava <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>

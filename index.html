@@ -229,6 +229,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/rxjava/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ljl233">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ljl233的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/04/rxjava/" itemprop="url">RxJava</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T16:42:10+08:00">
+                2020-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="RxJava"><a href="#RxJava" class="headerlink" title="RxJava"></a>RxJava</h1><ul>
+<li>依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation &quot;io.reactivex.rxjava2:rxjava:2.2.13&quot;</span><br><span class="line">implementation &apos;io.reactivex.rxjava2:rxandroid:2.1.1&apos;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。</p>
+<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><blockquote>
+<p>观察者模式（发布－订阅模式）：属于行为型模式的一种，是一种一对多的依赖关系，多个观察者观察一个被观察者。当被观察者变化时，所有观察者都会收到通知，并进行自身的改变。</p>
+<p>就相当于，在微博，微信平台上关注了一些明星。当他们状态更新了之后就会给你发消息提醒“您关注的ｃｘｋ有新的动态哦！”，你会收到相关的提醒，会作出反映，打开app查看，或者不理会(不做任何处理也相当于一种处理)</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/04/rxjava/" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/AsyncTask源码完全解析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -299,322 +432,16 @@
 
       
         
-          
-            <h2 id="AsyncTask-源码分析"><a href="#AsyncTask-源码分析" class="headerlink" title="AsyncTask 源码分析"></a><strong>AsyncTask 源码分析</strong></h2><p>参考：<a href="https://blog.csdn.net/iispring/article/details/50670388" target="_blank" rel="noopener">https://blog.csdn.net/iispring/article/details/50670388</a></p>
+          <h2 id="AsyncTask-源码分析"><a href="#AsyncTask-源码分析" class="headerlink" title="AsyncTask 源码分析"></a><strong>AsyncTask 源码分析</strong></h2><p>参考：<a href="https://blog.csdn.net/iispring/article/details/50670388" target="_blank" rel="noopener">https://blog.csdn.net/iispring/article/details/50670388</a></p>
 <h2 id="AsyncTask-使用流程"><a href="#AsyncTask-使用流程" class="headerlink" title="AsyncTask 使用流程"></a><strong>AsyncTask 使用流程</strong></h2><p><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3VwbG9hZC1pbWFnZXMuamlhbnNodS5pby91cGxvYWRfaW1hZ2VzLzk0NDM2NS0zMWRmNzk0MDA2YzY5NjIxLnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwJTdDaW1hZ2VWaWV3Mi8yL3cvMTI0MA" alt="https://blog.csdn.net/carson_ho/article/details/79314325"></p>
 <p>图源：<a href="https://blog.csdn.net/carson_ho/article/details/79314326" target="_blank" rel="noopener">https://blog.csdn.net/carson_ho/article/details/79314326</a></p>
-<h2 id="开始准备工作"><a href="#开始准备工作" class="headerlink" title="开始准备工作"></a><strong>开始准备工作</strong></h2><h3 id="execute"><a href="#execute" class="headerlink" title="execute()"></a><strong>execute()</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@MainThread</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> AsyncTask&lt;Params, Progress, Result&gt; <span class="title">execute</span><span class="params">(Params... params)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> executeOnExecutor(sDefaultExecutor, params);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>execute()只能在主线程执行</p>
-</li>
-<li><p>调用executeOnExecutor方法，将sDefaultExecutor当作参数传入方法，这个是默认的执行的Executer</p>
-</li>
-</ul>
-<h3 id="看一下sDefaultExecutor是个什么东西"><a href="#看一下sDefaultExecutor是个什么东西" class="headerlink" title="看一下sDefaultExecutor是个什么东西"></a><strong>看一下sDefaultExecutor是个什么东西</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sDefaultExecutor初始值是SerialExecutor的实例化</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">SerialExecutor</span> <span class="keyword">implements</span> <span class="title">Executor</span> </span>&#123;</span><br><span class="line">        <span class="comment">//mTasks是一个维护Runnable 的双端队列，没有容量限制，其容量自增加，不支持并发</span></span><br><span class="line">        <span class="keyword">final</span> ArrayDeque&lt;Runnable&gt; mTasks = <span class="keyword">new</span> ArrayDeque&lt;Runnable&gt;();</span><br><span class="line">        *<span class="comment">//mActive表示正在执行的任务*</span></span><br><span class="line">	    Runnable mActive;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(<span class="keyword">final</span> Runnable r)</span> </span>&#123;</span><br><span class="line">            *<span class="comment">//将r进行封装*</span></span><br><span class="line">            *<span class="comment">//将这个任务放到队尾*</span></span><br><span class="line">            mTasks.offer(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        r.run();</span><br><span class="line">                    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                        *<span class="comment">//当执行这个任务结束之后，执行下一个任务*</span></span><br><span class="line">                        scheduleNext();</span><br><span class="line">                    &#125;</span><br><span class="line">               &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            *<span class="comment">//当前没有任何任务的之后，立即调用这个方法来执行下一个*</span></span><br><span class="line">                <span class="keyword">if</span> (mActive == <span class="keyword">null</span>) &#123;</span><br><span class="line">                scheduleNext();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        <span class="function"><span class="keyword">protected</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">scheduleNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">if</span> ((mActive = mTasks.poll()) != <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">                THREAD_POOL_EXECUTOR.execute(mActive);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>SerialExecutor的用处</p>
-<ul>
-<li><p>将执行任务进行进一步的封装，真正处理这个任务的是THREAD_POOL_EXECUTOR</p>
-</li>
-<li><p>将新任务放进一个队列中，保证每次处理的都是按顺序的，也就是所谓的串行处理</p>
-</li>
-<li><p>用THREAD_POOL_EXECUTOR线程池来进行任务的调度。</p>
-</li>
-</ul>
-<h3 id="execteOnExecutor"><a href="#execteOnExecutor" class="headerlink" title="execteOnExecutor"></a><strong>execteOnExecutor</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">@MainThread</span></span><br><span class="line"></span><br><span class="line">​    <span class="function"><span class="keyword">public</span> <span class="keyword">final</span> AsyncTask&lt;Params, Progress, Result&gt; <span class="title">executeOnExecutor</span><span class="params">(Executor exec,</span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">​            Params... params)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">if</span> (mStatus != Status.PENDING) &#123;</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">switch</span> (mStatus) &#123;</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">case</span> RUNNING:</span><br><span class="line"></span><br><span class="line">​                *<span class="comment">//如果当前的AsyncTask是运行状态就抛出异常，不再执行新的任务*</span></span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Cannot execute task:"</span></span><br><span class="line"></span><br><span class="line">​                            \+ <span class="string">" the task is already running."</span>);</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">case</span> FINISHED:</span><br><span class="line"></span><br><span class="line">​                *<span class="comment">//如果当前的AsyncTask是已完成状态也抛出异常，不再执行新任务*</span></span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalStateException(<span class="string">"Cannot execute task:"</span></span><br><span class="line"></span><br><span class="line">​                            \+ <span class="string">" the task has already been executed "</span></span><br><span class="line"></span><br><span class="line">​                            \+ <span class="string">"(a task can be executed only once)"</span>);</span><br><span class="line"></span><br><span class="line">​            &#125;</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        mStatus = Status.RUNNING;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        onPreExecute();</span><br><span class="line"></span><br><span class="line">​        *<span class="comment">//将参数传递给mWorker*</span></span><br><span class="line"></span><br><span class="line">​        mWorker.mParams = params;</span><br><span class="line"></span><br><span class="line">​        exec.execute(mFuture);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>将所有的处理任务所需要的信息，和对结果的控制放在mFuture里面，由线程池来调度任务的执行</p>
-<ul>
-<li>onPreExecute();</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在真正开始执行之前先进行onPreExecute，重写此方法*</span></span><br><span class="line"></span><br><span class="line">​    <span class="meta">@MainThread</span></span><br><span class="line"></span><br><span class="line">​    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onPreExecute</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>mWorker 是一个WorkerRunnable的对象</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指定泛型result的Callable*</span></span><br><span class="line"></span><br><span class="line">​     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">WorkerRunnable</span>&lt;<span class="title">Params</span>, <span class="title">Result</span>&gt; <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Result</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">​        Params[] mParams;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="实际任务的处理"><a href="#实际任务的处理" class="headerlink" title="实际任务的处理"></a><strong>实际任务的处理</strong></h2><h3 id="AsynaTask的构造函数，将mWorker和mFuture实例化"><a href="#AsynaTask的构造函数，将mWorker和mFuture实例化" class="headerlink" title="AsynaTask的构造函数，将mWorker和mFuture实例化"></a><strong>AsynaTask的构造函数，将mWorker和mFuture实例化</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">    *<span class="comment">//AsyncTask的构造函数需要在ui线程调用*</span></span><br><span class="line"></span><br><span class="line">​    <span class="function"><span class="keyword">public</span> <span class="title">AsyncTask</span><span class="params">(@Nullable Looper callbackLooper)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        *<span class="comment">//默认的主线程调用构造方法，如果不是主线程就创建一个这个looper的handler*</span></span><br><span class="line"></span><br><span class="line">​        mHandler = callbackLooper == <span class="keyword">null</span> || callbackLooper == Looper.getMainLooper()</span><br><span class="line"></span><br><span class="line">​            ? getMainHandler()</span><br><span class="line"></span><br><span class="line">​            : <span class="keyword">new</span> Handler(callbackLooper);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        mWorker = <span class="keyword">new</span> WorkerRunnable&lt;Params, Result&gt;() &#123;</span><br><span class="line"></span><br><span class="line">​            <span class="function"><span class="keyword">public</span> Result <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">​                *<span class="comment">//mTaskInvoked 是一个可以保证原子性的布尔值*</span></span><br><span class="line"></span><br><span class="line">​                *<span class="comment">//call执行的时候，设为true表示该任务开始执行*</span></span><br><span class="line"></span><br><span class="line">​                mTaskInvoked.set(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">​                Result result = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//将call执行的线程，设置为后台线程级别*</span></span><br><span class="line"></span><br><span class="line">​                    Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//noinspection unchecked*</span></span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//调用doInBackground实际执行任务，将结果返回，`在工作线程执行方法`,该线程由执行这个回调方法的线程来控制*</span></span><br><span class="line"></span><br><span class="line">​                    result = doInBackground(mParams);</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//刷新等待指令*</span></span><br><span class="line"></span><br><span class="line">​                    Binder.flushPendingCommands();</span><br><span class="line"></span><br><span class="line">​                &#125; <span class="keyword">catch</span> (Throwable tr) &#123;</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//将mCancelled设置为true，进行 异常判断，是否完成当前任务*</span></span><br><span class="line"></span><br><span class="line">​                    mCancelled.set(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">throw</span> tr;</span><br><span class="line"></span><br><span class="line">​                &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">//将结果传给postresult，postresult将结果发送到当前handler的消息队列中*</span></span><br><span class="line"></span><br><span class="line">​                    postResult(result);</span><br><span class="line"></span><br><span class="line">​                &#125;</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">​            &#125;</span><br><span class="line"></span><br><span class="line">​        &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        mFuture = <span class="keyword">new</span> FutureTask&lt;Result&gt;(mWorker) &#123;</span><br><span class="line"></span><br><span class="line">​            <span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line">​            <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">done</span><span class="params">()</span> </span>&#123;*<span class="comment">//任务完成或取消都会调用done方法*</span></span><br><span class="line"></span><br><span class="line">​                <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">​                    postResultIfNotInvoked(get());</span><br><span class="line"></span><br><span class="line">​                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line"></span><br><span class="line">​                    android.util.Log.w(LOG_TAG, e);</span><br><span class="line"></span><br><span class="line">​                &#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"An error occurred while executing doInBackground()"</span>,</span><br><span class="line"></span><br><span class="line">​                            e.getCause());</span><br><span class="line"></span><br><span class="line">​                &#125; <span class="keyword">catch</span> (CancellationException e) &#123;</span><br><span class="line"></span><br><span class="line">​                    postResultIfNotInvoked(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">​                &#125;</span><br><span class="line"></span><br><span class="line">​            &#125;</span><br><span class="line"></span><br><span class="line">​        &#125;;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>&lt;!–￼6–&gt;</p>
-<h2 id="任务执行过程中和结束时的消息处理"><a href="#任务执行过程中和结束时的消息处理" class="headerlink" title="任务执行过程中和结束时的消息处理"></a><strong>任务执行过程中和结束时的消息处理</strong></h2><p>利用postResult将result中的信息发送给InternalHandler来处理</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">postResultIfNotInvoked</span><span class="params">(Result result)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">final</span> <span class="keyword">boolean</span> wasTaskInvoked = mTaskInvoked.get();</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">if</span> (!wasTaskInvoked) &#123;</span><br><span class="line"></span><br><span class="line">​            postResult(result);</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> Result <span class="title">postResult</span><span class="params">(Result result)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line"></span><br><span class="line">​        Message message = getHandler().obtainMessage(MESSAGE_POST_RESULT,</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">new</span> AsyncTaskResult&lt;Result&gt;(<span class="keyword">this</span>, result));</span><br><span class="line"></span><br><span class="line">​        message.sendToTarget();</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">return</span> result;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>只是将result和task的实例进行封装，没有实例方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTaskResult</span>&lt;<span class="title">Data</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">final</span> AsyncTask mTask;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">final</span> Data[] mData;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        AsyncTaskResult(AsyncTask task, Data... data) &#123;</span><br><span class="line"></span><br><span class="line">​            mTask = task;</span><br><span class="line"></span><br><span class="line">​            mData = data;</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>InternalHandler是一个继承了Handler的内部类，重写了handleMessage方法</p>
-</li>
-<li><p>msg有两种</p>
-</li>
-<li><p>MESSAGE_POST_RESULT： 表示任务已经完成，调用finish方法来处理结果</p>
-</li>
-<li><p>MESSAGE_POST_PROGRESS： 表示阶段性完成，publishProgress()发送的msg，调用onProgressUpdate来显示进度条等操作</p>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InternalHandler</span> <span class="keyword">extends</span> <span class="title">Handler</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="function"><span class="keyword">public</span> <span class="title">InternalHandler</span><span class="params">(Looper looper)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">super</span>(looper);</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​        <span class="meta">@SuppressWarnings</span>(&#123;<span class="string">"unchecked"</span>, <span class="string">"RawUseOfParameterizedType"</span>&#125;)</span><br><span class="line"></span><br><span class="line">​        <span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line">​        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">handleMessage</span><span class="params">(Message msg)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​            AsyncTaskResult&lt;?&gt; result = (AsyncTaskResult&lt;?&gt;) msg.obj;</span><br><span class="line"></span><br><span class="line">​            <span class="keyword">switch</span> (msg.what) &#123;</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">case</span> MESSAGE_POST_RESULT:</span><br><span class="line"></span><br><span class="line">​                    *<span class="comment">// There is only one result*</span></span><br><span class="line"></span><br><span class="line">​                    result.mTask.finish(result.mData[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">​                <span class="keyword">case</span> MESSAGE_POST_PROGRESS:</span><br><span class="line"></span><br><span class="line">​                    result.mTask.onProgressUpdate(result.mData);</span><br><span class="line"></span><br><span class="line">​                    <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">​            &#125;</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>根据状态来处理，已取消或者已完成来分别处理</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">finish</span><span class="params">(Result result)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​        <span class="keyword">if</span> (isCancelled()) &#123;</span><br><span class="line"></span><br><span class="line">​            onCancelled(result);*<span class="comment">//调用onCancelled（）方法，需要重写*</span></span><br><span class="line"></span><br><span class="line">​        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">​            *<span class="comment">//onPostExecute需要重写*</span></span><br><span class="line"></span><br><span class="line">​            onPostExecute(result);</span><br><span class="line"></span><br><span class="line">​        &#125;</span><br><span class="line"></span><br><span class="line">​        mStatus = Status.FINISHED;</span><br><span class="line"></span><br><span class="line">​    &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><p>AsyncTask的执行流程：</p>
-<ul>
-<li><p>在主线程（可以不是主线程）调用execute()方法，传入<code>param</code>参数，以<code>SerialExecutor</code>的实例化对象<code>sDefaultExecutor</code>为参数调用executeOnExecutor(Executor exec, Params… params)来处理params</p>
-</li>
-<li><p><code>SerialExecutor</code>是继承executor一个内部类，内部维护了一个任务队列，保证事务的串行执行，实际是在线程池THREAD_POOL_EXECUTOR的execte方法来处理的，处理的就是FutureTask的对象</p>
-</li>
-<li><p>将doInBackground方法封装在mWorker的call()方法中，再把mWorker当参数实例化一个FutureTask的实例，由FutureTask来处理doInBackground中的异常</p>
-</li>
-<li><p>mFuture在执行过程中发生异常时，是通过调用postResultIfNotInvoked方法调用postResult()</p>
-</li>
-<li><p>执行成功时直接调用postResult来finish()，finish()再调用重写的onPostExecute()来处理结果</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/18/rxjava/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ljl233">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ljl233的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/18/rxjava/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-18T20:22:24+08:00">
-                2019-10-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="RxJava"><a href="#RxJava" class="headerlink" title="RxJava"></a>RxJava</h1><ul>
-<li>依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation &quot;io.reactivex.rxjava2:rxjava:2.2.13&quot;</span><br><span class="line">implementation &apos;io.reactivex.rxjava2:rxandroid:2.1.1&apos;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。</p>
-<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><blockquote>
-<p>观察者模式（发布－订阅模式）：属于行为型模式的一种，是一种一对多的依赖关系，多个观察者观察一个被观察者。当被观察者变化时，所有观察者都会收到通知，并进行自身的改变。</p>
-<p>就相当于，在微博，微信平台上关注了一些明星。当他们状态更新了之后就会给你发消息提醒“您关注的ｃｘｋ有新的动态哦！”，你会收到相关的提醒，会作出反映，打开app查看，或者不理会(不做任何处理也相当于一种处理)</p>
-</blockquote>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
-<li>关联行为场景，比如注册之后自动登录(注册成功后自动调用登录的接口)，需要注意的是，关联行为是可拆分的，而不是”组合”关系</li>
-<li>事件多级触发场景</li>
-<li>跨系统的信息交换场景，如消息队列(“消息队列”是在消息的传输过程中保存消息的容器。)，事件总线的处理机制</li>
-<li>Java 中的消息消息通知是按照顺序执行的，如果一个观察者卡顿，会影响整体的执行效率，一般采用异步实现</li>
-</ul>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="基本使用-observable-subscribe-observer"><a href="#基本使用-observable-subscribe-observer" class="headerlink" title="基本使用 observable.subscribe(observer);"></a>基本使用 <code>observable.subscribe(observer);</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">observable.subscribe(observer);</span><br><span class="line"><span class="comment">//被观察者被观察者订阅；</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现接口+链式表达</span></span><br><span class="line">Observable.create(<span class="keyword">new</span> ObservableOnSubscribe&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(ObservableEmitter&lt;Integer&gt; emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">1</span>);</span><br><span class="line">                emitter.onNext(<span class="number">1</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">2</span>);</span><br><span class="line">                emitter.onNext(<span class="number">2</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">3</span>);</span><br><span class="line">                emitter.onNext(<span class="number">3</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit complete"</span>);</span><br><span class="line">                emitter.onComplete();</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">1</span>);</span><br><span class="line">                emitter.onNext(<span class="number">1</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">2</span>);</span><br><span class="line">                emitter.onNext(<span class="number">2</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">3</span>);</span><br><span class="line">                emitter.onNext(<span class="number">3</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">             Disposable mDisposable;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//订阅时首先调用这个方法</span></span><br><span class="line">                Log.d(TAG, <span class="string">"onSubscribe"</span>);</span><br><span class="line">                <span class="comment">//可以在这个方法中获得　Disposable 的对象</span></span><br><span class="line">                 mDisposable = d;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer integer)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"onNext"</span> + integer);</span><br><span class="line">                <span class="keyword">if</span> (integer == <span class="number">2</span>) &#123;</span><br><span class="line">                    Log.d(TAG, <span class="string">"dispose"</span>);</span><br><span class="line">                    mDisposable.dispose();</span><br><span class="line">                    Log.d(TAG, <span class="string">"isDisposed:"</span> + mDisposable.isDisposed());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"error"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"onComplete"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
-
-<p>ObservableEmitter:　用来发射事件<code>onNext(T values)</code> <code>onComplete</code> <code>onError(Throwable erroer)</code></p>
-<ul>
-<li>Observable可以发送无限个onNext, 只要observer接收的过来。在同一个线程中发送一个接受一个，再发送一个，再接受一个</li>
-<li>onComplete 后Observable继续发送，但observer 不再接受</li>
-<li>发射一个onError 后Obserable 继续发送，observer 接收到onError后不再接收</li>
-<li>不能发射多个onComplete和onError，因为发送一个onComplete或者onError后，后面的onComplete和onError不会再被处理，那样onComplete 就没有意义了，然而onError  抛出的异常就不会被处理而导致系统崩溃。</li>
-<li>dispose()会中断obserable和observer的联系，obserable继续发送事件，observer接受不到事件。                      —-&gt; 在这里看来似乎与onComplete功能一样。</li>
-</ul>
-<p>subscribe还有几个重载方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError)</span> </span>&#123;&#125; </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError, Action onComplete)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError, Action onComplete, Consumer&lt;? <span class="keyword">super</span> Disposable&gt; onSubscribe)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(Observer&lt;? <span class="keyword">super</span> T&gt; observer)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里面除了刚才用到的以外，其他的方法都是返回了一个disposable对象，方法里面的参数对应着包含相当于onNext，onError，onDisposable的抽象方法的Cousumer泛型接口，onComplete在Action接口里。</p>
-<p>除了disposable以外其他方法的使用和上面讲的那个方法差不多，既然这几个方法返回值是disposable，那么就应该使用这个返回值来dispose。<br>但是调用了却没有反应，如果在参数重写accept(Disaposable)就会首先调用。？？？？？？</p>
-<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h2 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h2><ul>
-<li>Observable 和observer 默认是在同一个线程下</li>
-<li>rxjava 内置的线程调度器可以轻松的实现线程的转换<ul>
-<li>subscribeOn() 指定的是上游发送事件的线程,<ul>
-<li>多次指定上游的线程只有第一次指定的有效</li>
-</ul>
-</li>
-<li>observeOn() 指定的是下游接收事件的线程。<ul>
-<li>多次指定下游的线程是可以的, 也就是说每调用一次observeOn() , 下游的线程就会切换一次.</li>
-<li>多次指定下游是如何切换的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>代码实现</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Observable observable = Observable.create(<span class="keyword">new</span> ObservableOnSubscribe() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(ObservableEmitter emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">               emitter.onNext(<span class="number">1</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"observable emit---&gt;"</span> + <span class="number">1</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"after the thread is----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line"></span><br><span class="line">               emitter.onNext(<span class="number">2</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"observable emit---&gt;"</span> + <span class="number">2</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"after the thread is----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">       Consumer&lt;Integer&gt; consumer = <span class="keyword">new</span> Consumer&lt;Integer&gt;() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Integer o)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">               Log.e(TAG, <span class="string">"consumer accept----&gt;"</span> + o +</span><br><span class="line">                       <span class="string">"        the thread is-----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line"></span><br><span class="line">       observable.subscribeOn(AndroidSchedulers.mainThread())</span><br><span class="line">               .observeOn(Schedulers.newThread())</span><br><span class="line">               .doOnNext(consumer)</span><br><span class="line">               .observeOn(Schedulers.io())</span><br><span class="line">               .subscribe(consumer);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//observer改变线程会在两个线程内有顺序的收到Observable 发射的数据，会分别往两个线程发射数据</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Rxjava内置线程选项"><a href="#Rxjava内置线程选项" class="headerlink" title="Rxjava内置线程选项"></a>Rxjava内置线程选项</h4><ul>
-<li>Schedulers.io() 代表io操作的线程, 通常用于网络,读写文件等io密集型的操作</li>
-<li>Schedulers.computation() 代表CPU计算密集型的操作, 例如需要大量计算的操作</li>
-<li>Schedulers.newThread() 代表一个常规的新线程</li>
-<li>AndroidSchedulers.mainThread()  代表Android的主线程</li>
-</ul>
-<h2 id="rxjava-retrofit网络请求实践"><a href="#rxjava-retrofit网络请求实践" class="headerlink" title="rxjava  +  retrofit网络请求实践"></a><code>rxjava</code>  +  <code>retrofit</code>网络请求实践</h2><p>网络请求步骤</p>
-<ul>
-<li>创建Retrofit客户端，包含baseurl，拦截器，解析器</li>
-<li>创建Api接口，每个抽象方法返回一个Call对象</li>
-<li>使用Call对象进行同步或者异步的网络请求</li>
-<li>用Retrofit对象通过create()方法创建Api接口的对象</li>
-<li>再用这个对象调用接口里的方法获得Call对象</li>
-</ul>
-<p>使用rxJava后</p>
-<ul>
-<li>在Api接口内的方法返回的是Observable对象</li>
-<li>用rxJava替代Call来进行异步请求</li>
-</ul>
-<p>我们在子线程里进行网络请求，将请求结果返回主线程更新ui，如果Activity退出后，更新ui就会报空指针错误。这种情况就可以在Activity中保存这个Disposable对象，当Activity退出时调用dispose()方法。这样就不会接受到数据，就不会更新ui了。</p>
-<h2 id="嵌套请求"><a href="#嵌套请求" class="headerlink" title="嵌套请求"></a>嵌套请求</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a><code>Map</code></h3><blockquote>
-<p>将Observable 的结果转换成另外一种形式，对其进行加工</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">observable.map(<span class="keyword">new</span> Function&lt;Integer, String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Integer integer)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">"This is result "</span> + integer;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(observer)</span><br></pre></td></tr></table></figure>
-
-<h3 id="FlatMap"><a href="#FlatMap" class="headerlink" title="FlatMap"></a><code>FlatMap</code></h3><blockquote>
-<p>将Observable 的结果转换成另外一个Observable</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">observable.flatMap(<span class="keyword">new</span> Function&lt;Integer, ObservableSource&lt;String&gt;&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> ObservableSource&lt;String&gt; <span class="title">apply</span><span class="params">(Integer integer)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                <span class="keyword">final</span> List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">                    list.add(<span class="string">"I am value "</span> + integer);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> Observable.fromIterable(list).delay(<span class="number">10</span>,TimeUnit.MILLISECONDS);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(observer);</span><br></pre></td></tr></table></figure>
-
-<p>flatMap返回的结果是无序的，如果想要有序的结果，使用concatMap</p>
-<h2 id="zip"><a href="#zip" class="headerlink" title="zip"></a><code>zip</code></h2><blockquote>
-<p>将多个Observable 对象的结果打包成一个进行处理（最多9个），并实现Function 接口来定义处理操作<br>将每个Observable对象中发射的数据一一对应进行打包<br>当一个Observable对象complete后，另一个也会停止产生数据</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Observable.zip(observable1, observable2, <span class="keyword">new</span> BiFunction&lt;Integer, String, String&gt;() &#123;                 </span><br><span class="line">    <span class="meta">@Override</span>                                                                                        </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Integer integer, String s)</span> <span class="keyword">throws</span> Exception </span>&#123;                            </span><br><span class="line">        <span class="keyword">return</span> integer + s;     </span><br><span class="line">    &#125; </span><br><span class="line">&#125;).subscribe(observer);</span><br></pre></td></tr></table></figure>
-
-<h1 id="背压-Backpressure"><a href="#背压-Backpressure" class="headerlink" title="背压 Backpressure"></a>背压 Backpressure</h1><p>一般会用rxjava的线程管理来处理耗时操作，比如网络请求，读写数据库，因为如果都在主线程操作的话会堵塞线程，而更新ui的操作只能在主线程。</p>
-<p>这是上游的操作耗时太长这样处理，那上游太快了，下游来不及处理怎么办呢？<br>这时候就需要用到背压了</p>
-<h2 id="flowable-subscribe-subscriber"><a href="#flowable-subscribe-subscriber" class="headerlink" title="flowable.subscribe(subscriber);"></a>flowable.subscribe(subscriber);</h2><p>在使用create方法构造Flowable对象时，增加了一个参数，这个参数就对应着一个背压策略</p>
-<p>除了这个和Observable 不一样以外，在observer里的onSubscribe传进来的方法不再是disposable对象而是Subscription对象，subscription.cancle()和disposable.dispose()有同样的效果。他们的区别在于subscription增加了request()方法</p>
-<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><ul>
-<li>request(int)方法体现了响应式拉取的思想</li>
-<li>根据subscriber的处理能力，即request（int）里的参数，来告诉flowable需要发送几个数据</li>
-<li>异步的时候会有一个可以装下128个对象的队列</li>
-</ul>
-<h3 id="背压策略"><a href="#背压策略" class="headerlink" title="背压策略"></a>背压策略</h3><ul>
-<li>BackpressureStrategy.DROP<ul>
-<li>将存不下的直接丢弃</li>
-</ul>
-</li>
-<li>BackpressureStrategy.ERROR<ul>
-<li>超过128后直接报错</li>
-</ul>
-</li>
-<li>BackpressureStrategy.LATEST<ul>
-<li>只保留最新事件</li>
-</ul>
-</li>
-<li>BackpressureStrategy.BUFFER<ul>
-<li>没有大小限制</li>
-</ul>
-</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/01/15/AsyncTask源码完全解析/" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

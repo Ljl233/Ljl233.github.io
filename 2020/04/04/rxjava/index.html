@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="RxJava 依赖12implementation &amp;quot;io.reactivex.rxjava2:rxjava:2.2.13&amp;quot;implementation &amp;apos;io.reactivex.rxjava2:rxandroid:2.1.1&amp;apos;    我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。 观察者模式 观察者模式（发布－订阅模式）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RxJava">
+<meta property="og:url" content="http://yoursite.com/2020/04/04/rxjava/index.html">
+<meta property="og:site_name" content="Ljl233的博客">
+<meta property="og:description" content="RxJava 依赖12implementation &amp;quot;io.reactivex.rxjava2:rxjava:2.2.13&amp;quot;implementation &amp;apos;io.reactivex.rxjava2:rxandroid:2.1.1&amp;apos;    我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。 观察者模式 观察者模式（发布－订阅模式）">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-04-04T08:42:10.866Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RxJava">
+<meta name="twitter:description" content="RxJava 依赖12implementation &amp;quot;io.reactivex.rxjava2:rxjava:2.2.13&amp;quot;implementation &amp;apos;io.reactivex.rxjava2:rxandroid:2.1.1&amp;apos;    我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。 观察者模式 观察者模式（发布－订阅模式）">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/04/04/rxjava/">
+
+
+
+
+
+  <title>RxJava | Ljl233的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ljl233的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/04/rxjava/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ljl233">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ljl233的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">RxJava</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-04T16:42:10+08:00">
+                2020-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="RxJava"><a href="#RxJava" class="headerlink" title="RxJava"></a>RxJava</h1><ul>
+<li>依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">implementation &quot;io.reactivex.rxjava2:rxjava:2.2.13&quot;</span><br><span class="line">implementation &apos;io.reactivex.rxjava2:rxandroid:2.1.1&apos;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>我觉得rxjava主要是观察者模式加上链式表达使得异步更加方便，方便的转换线程。</p>
+<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><blockquote>
+<p>观察者模式（发布－订阅模式）：属于行为型模式的一种，是一种一对多的依赖关系，多个观察者观察一个被观察者。当被观察者变化时，所有观察者都会收到通知，并进行自身的改变。</p>
+<p>就相当于，在微博，微信平台上关注了一些明星。当他们状态更新了之后就会给你发消息提醒“您关注的ｃｘｋ有新的动态哦！”，你会收到相关的提醒，会作出反映，打开app查看，或者不理会(不做任何处理也相当于一种处理)</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ul>
+<li>关联行为场景，比如注册之后自动登录(注册成功后自动调用登录的接口)，需要注意的是，关联行为是可拆分的，而不是”组合”关系</li>
+<li>事件多级触发场景</li>
+<li>跨系统的信息交换场景，如消息队列(“消息队列”是在消息的传输过程中保存消息的容器。)，事件总线的处理机制</li>
+<li>Java 中的消息消息通知是按照顺序执行的，如果一个观察者卡顿，会影响整体的执行效率，一般采用异步实现</li>
+</ul>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="基本使用-observable-subscribe-observer"><a href="#基本使用-observable-subscribe-observer" class="headerlink" title="基本使用 observable.subscribe(observer);"></a>基本使用 <code>observable.subscribe(observer);</code></h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">observable.subscribe(observer);</span><br><span class="line"><span class="comment">//被观察者被观察者订阅；</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现接口+链式表达</span></span><br><span class="line">Observable.create(<span class="keyword">new</span> ObservableOnSubscribe&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(ObservableEmitter&lt;Integer&gt; emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">1</span>);</span><br><span class="line">                emitter.onNext(<span class="number">1</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">2</span>);</span><br><span class="line">                emitter.onNext(<span class="number">2</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">3</span>);</span><br><span class="line">                emitter.onNext(<span class="number">3</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit complete"</span>);</span><br><span class="line">                emitter.onComplete();</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">1</span>);</span><br><span class="line">                emitter.onNext(<span class="number">1</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">2</span>);</span><br><span class="line">                emitter.onNext(<span class="number">2</span>);</span><br><span class="line">                Log.d(TAG, <span class="string">"emit"</span> + <span class="number">3</span>);</span><br><span class="line">                emitter.onNext(<span class="number">3</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(<span class="keyword">new</span> Observer&lt;Integer&gt;() &#123;</span><br><span class="line">             Disposable mDisposable;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onSubscribe</span><span class="params">(Disposable d)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//订阅时首先调用这个方法</span></span><br><span class="line">                Log.d(TAG, <span class="string">"onSubscribe"</span>);</span><br><span class="line">                <span class="comment">//可以在这个方法中获得　Disposable 的对象</span></span><br><span class="line">                 mDisposable = d;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onNext</span><span class="params">(Integer integer)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"onNext"</span> + integer);</span><br><span class="line">                <span class="keyword">if</span> (integer == <span class="number">2</span>) &#123;</span><br><span class="line">                    Log.d(TAG, <span class="string">"dispose"</span>);</span><br><span class="line">                    mDisposable.dispose();</span><br><span class="line">                    Log.d(TAG, <span class="string">"isDisposed:"</span> + mDisposable.isDisposed());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onError</span><span class="params">(Throwable e)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"error"</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onComplete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Log.d(TAG, <span class="string">"onComplete"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>ObservableEmitter:　用来发射事件<code>onNext(T values)</code> <code>onComplete</code> <code>onError(Throwable erroer)</code></p>
+<ul>
+<li>Observable可以发送无限个onNext, 只要observer接收的过来。在同一个线程中发送一个接受一个，再发送一个，再接受一个</li>
+<li>onComplete 后Observable继续发送，但observer 不再接受</li>
+<li>发射一个onError 后Obserable 继续发送，observer 接收到onError后不再接收</li>
+<li>不能发射多个onComplete和onError，因为发送一个onComplete或者onError后，后面的onComplete和onError不会再被处理，那样onComplete 就没有意义了，然而onError  抛出的异常就不会被处理而导致系统崩溃。</li>
+<li>dispose()会中断obserable和observer的联系，obserable继续发送事件，observer接受不到事件。                      —-&gt; 在这里看来似乎与onComplete功能一样。</li>
+</ul>
+<p>subscribe还有几个重载方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError)</span> </span>&#123;&#125; </span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError, Action onComplete)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> Disposable <span class="title">subscribe</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; onNext, Consumer&lt;? <span class="keyword">super</span> Throwable&gt; onError, Action onComplete, Consumer&lt;? <span class="keyword">super</span> Disposable&gt; onSubscribe)</span> </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(Observer&lt;? <span class="keyword">super</span> T&gt; observer)</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里面除了刚才用到的以外，其他的方法都是返回了一个disposable对象，方法里面的参数对应着包含相当于onNext，onError，onDisposable的抽象方法的Cousumer泛型接口，onComplete在Action接口里。</p>
+<p>除了disposable以外其他方法的使用和上面讲的那个方法差不多，既然这几个方法返回值是disposable，那么就应该使用这个返回值来dispose。<br>但是调用了却没有反应，如果在参数重写accept(Disaposable)就会首先调用。？？？？？？</p>
+<h1 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h1><h2 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h2><ul>
+<li>Observable 和observer 默认是在同一个线程下</li>
+<li>rxjava 内置的线程调度器可以轻松的实现线程的转换<ul>
+<li>subscribeOn() 指定的是上游发送事件的线程,<ul>
+<li>多次指定上游的线程只有第一次指定的有效</li>
+</ul>
+</li>
+<li>observeOn() 指定的是下游接收事件的线程。<ul>
+<li>多次指定下游的线程是可以的, 也就是说每调用一次observeOn() , 下游的线程就会切换一次.</li>
+<li>多次指定下游是如何切换的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>代码实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Observable observable = Observable.create(<span class="keyword">new</span> ObservableOnSubscribe() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">subscribe</span><span class="params">(ObservableEmitter emitter)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">               emitter.onNext(<span class="number">1</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"observable emit---&gt;"</span> + <span class="number">1</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"after the thread is----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line"></span><br><span class="line">               emitter.onNext(<span class="number">2</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"observable emit---&gt;"</span> + <span class="number">2</span>);</span><br><span class="line">               Log.e(TAG, <span class="string">"after the thread is----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">       Consumer&lt;Integer&gt; consumer = <span class="keyword">new</span> Consumer&lt;Integer&gt;() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">accept</span><span class="params">(Integer o)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">               Log.e(TAG, <span class="string">"consumer accept----&gt;"</span> + o +</span><br><span class="line">                       <span class="string">"        the thread is-----&gt;"</span> + Thread.currentThread().getName());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line"></span><br><span class="line">       observable.subscribeOn(AndroidSchedulers.mainThread())</span><br><span class="line">               .observeOn(Schedulers.newThread())</span><br><span class="line">               .doOnNext(consumer)</span><br><span class="line">               .observeOn(Schedulers.io())</span><br><span class="line">               .subscribe(consumer);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">//observer改变线程会在两个线程内有顺序的收到Observable 发射的数据，会分别往两个线程发射数据</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Rxjava内置线程选项"><a href="#Rxjava内置线程选项" class="headerlink" title="Rxjava内置线程选项"></a>Rxjava内置线程选项</h4><ul>
+<li>Schedulers.io() 代表io操作的线程, 通常用于网络,读写文件等io密集型的操作</li>
+<li>Schedulers.computation() 代表CPU计算密集型的操作, 例如需要大量计算的操作</li>
+<li>Schedulers.newThread() 代表一个常规的新线程</li>
+<li>AndroidSchedulers.mainThread()  代表Android的主线程</li>
+</ul>
+<h2 id="rxjava-retrofit网络请求实践"><a href="#rxjava-retrofit网络请求实践" class="headerlink" title="rxjava  +  retrofit网络请求实践"></a><code>rxjava</code>  +  <code>retrofit</code>网络请求实践</h2><p>网络请求步骤</p>
+<ul>
+<li>创建Retrofit客户端，包含baseurl，拦截器，解析器</li>
+<li>创建Api接口，每个抽象方法返回一个Call对象</li>
+<li>使用Call对象进行同步或者异步的网络请求</li>
+<li>用Retrofit对象通过create()方法创建Api接口的对象</li>
+<li>再用这个对象调用接口里的方法获得Call对象</li>
+</ul>
+<p>使用rxJava后</p>
+<ul>
+<li>在Api接口内的方法返回的是Observable对象</li>
+<li>用rxJava替代Call来进行异步请求</li>
+</ul>
+<p>我们在子线程里进行网络请求，将请求结果返回主线程更新ui，如果Activity退出后，更新ui就会报空指针错误。这种情况就可以在Activity中保存这个Disposable对象，当Activity退出时调用dispose()方法。这样就不会接受到数据，就不会更新ui了。</p>
+<h2 id="嵌套请求"><a href="#嵌套请求" class="headerlink" title="嵌套请求"></a>嵌套请求</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a><code>Map</code></h3><blockquote>
+<p>将Observable 的结果转换成另外一种形式，对其进行加工</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">observable.map(<span class="keyword">new</span> Function&lt;Integer, String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Integer integer)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="string">"This is result "</span> + integer;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(observer)</span><br></pre></td></tr></table></figure>
+
+<h3 id="FlatMap"><a href="#FlatMap" class="headerlink" title="FlatMap"></a><code>FlatMap</code></h3><blockquote>
+<p>将Observable 的结果转换成另外一个Observable</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">observable.flatMap(<span class="keyword">new</span> Function&lt;Integer, ObservableSource&lt;String&gt;&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> ObservableSource&lt;String&gt; <span class="title">apply</span><span class="params">(Integer integer)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">                <span class="keyword">final</span> List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">                    list.add(<span class="string">"I am value "</span> + integer);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> Observable.fromIterable(list).delay(<span class="number">10</span>,TimeUnit.MILLISECONDS);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;).subscribe(observer);</span><br></pre></td></tr></table></figure>
+
+<p>flatMap返回的结果是无序的，如果想要有序的结果，使用concatMap</p>
+<h2 id="zip"><a href="#zip" class="headerlink" title="zip"></a><code>zip</code></h2><blockquote>
+<p>将多个Observable 对象的结果打包成一个进行处理（最多9个），并实现Function 接口来定义处理操作<br>将每个Observable对象中发射的数据一一对应进行打包<br>当一个Observable对象complete后，另一个也会停止产生数据</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Observable.zip(observable1, observable2, <span class="keyword">new</span> BiFunction&lt;Integer, String, String&gt;() &#123;                 </span><br><span class="line">    <span class="meta">@Override</span>                                                                                        </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Integer integer, String s)</span> <span class="keyword">throws</span> Exception </span>&#123;                            </span><br><span class="line">        <span class="keyword">return</span> integer + s;     </span><br><span class="line">    &#125; </span><br><span class="line">&#125;).subscribe(observer);</span><br></pre></td></tr></table></figure>
+
+<h1 id="背压-Backpressure"><a href="#背压-Backpressure" class="headerlink" title="背压 Backpressure"></a>背压 Backpressure</h1><p>一般会用rxjava的线程管理来处理耗时操作，比如网络请求，读写数据库，因为如果都在主线程操作的话会堵塞线程，而更新ui的操作只能在主线程。</p>
+<p>这是上游的操作耗时太长这样处理，那上游太快了，下游来不及处理怎么办呢？<br>这时候就需要用到背压了</p>
+<h2 id="flowable-subscribe-subscriber"><a href="#flowable-subscribe-subscriber" class="headerlink" title="flowable.subscribe(subscriber);"></a>flowable.subscribe(subscriber);</h2><p>在使用create方法构造Flowable对象时，增加了一个参数，这个参数就对应着一个背压策略</p>
+<p>除了这个和Observable 不一样以外，在observer里的onSubscribe传进来的方法不再是disposable对象而是Subscription对象，subscription.cancle()和disposable.dispose()有同样的效果。他们的区别在于subscription增加了request()方法</p>
+<h3 id="request"><a href="#request" class="headerlink" title="request"></a>request</h3><ul>
+<li>request(int)方法体现了响应式拉取的思想</li>
+<li>根据subscriber的处理能力，即request（int）里的参数，来告诉flowable需要发送几个数据</li>
+<li>异步的时候会有一个可以装下128个对象的队列</li>
+</ul>
+<h3 id="背压策略"><a href="#背压策略" class="headerlink" title="背压策略"></a>背压策略</h3><ul>
+<li>BackpressureStrategy.DROP<ul>
+<li>将存不下的直接丢弃</li>
+</ul>
+</li>
+<li>BackpressureStrategy.ERROR<ul>
+<li>超过128后直接报错</li>
+</ul>
+</li>
+<li>BackpressureStrategy.LATEST<ul>
+<li>只保留最新事件</li>
+</ul>
+</li>
+<li>BackpressureStrategy.BUFFER<ul>
+<li>没有大小限制</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/15/AsyncTask源码完全解析/" rel="next" title="AsyncTask源码完全解析">
+                <i class="fa fa-chevron-left"></i> AsyncTask源码完全解析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ljl233</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RxJava"><span class="nav-number">1.</span> <span class="nav-text">RxJava</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#观察者模式"><span class="nav-number">2.</span> <span class="nav-text">观察者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用场景"><span class="nav-number">2.0.1.</span> <span class="nav-text">使用场景</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本使用-observable-subscribe-observer"><span class="nav-number">3.1.</span> <span class="nav-text">基本使用 observable.subscribe(observer);</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作符"><span class="nav-number">4.</span> <span class="nav-text">操作符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线程调度"><span class="nav-number">4.1.</span> <span class="nav-text">线程调度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rxjava内置线程选项"><span class="nav-number">4.1.0.1.</span> <span class="nav-text">Rxjava内置线程选项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rxjava-retrofit网络请求实践"><span class="nav-number">4.2.</span> <span class="nav-text">rxjava  +  retrofit网络请求实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌套请求"><span class="nav-number">4.3.</span> <span class="nav-text">嵌套请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">4.3.1.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FlatMap"><span class="nav-number">4.3.2.</span> <span class="nav-text">FlatMap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zip"><span class="nav-number">4.4.</span> <span class="nav-text">zip</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#背压-Backpressure"><span class="nav-number">5.</span> <span class="nav-text">背压 Backpressure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#flowable-subscribe-subscriber"><span class="nav-number">5.1.</span> <span class="nav-text">flowable.subscribe(subscriber);</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#request"><span class="nav-number">5.1.1.</span> <span class="nav-text">request</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#背压策略"><span class="nav-number">5.1.2.</span> <span class="nav-text">背压策略</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ljl233</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
